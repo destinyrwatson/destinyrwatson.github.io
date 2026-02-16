@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Name: Destiny Watson
+  Course: Web Design Development (IS_LT-4355)
+  Description: About page using semantic HTML with styled buttons and auto-updating date.
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <style>
+    /* Simple button style for navigation links */
+    nav a {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-right: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- header with logo and navigation -->
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- main content -->
+  <main>
+    <h3>My Background</h3>
+    <p>I am learning semantic HTML to create well-structured web pages.</p>
+
+    <h3>My Goals</h3>
+    <p>My goal is to master HTML first, then move on to CSS and JavaScript to build interactive websites.</p>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    Destiny Watson - <span id="current-date"></span>
+  </footer>
+
+  <!-- JavaScript to auto-update date -->
+  <script>
+    const dateElement = document.getElementById('current-date');
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    dateElement.textContent = today.toLocaleDateString('en-US', options);
+  </script>
+
+</body>
+</html>
+
