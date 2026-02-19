@@ -3,7 +3,7 @@
 <!--
   Name: Destiny Watson
   Course: Web Design Development (IS_LT-4355)
-  Description: About page using semantic HTML with styled buttons and auto-updating date.
+  Description: About page using semantic HTML with styled buttons.
 -->
 
 <head>
@@ -11,7 +11,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Page</title>
   <style>
-    /* Simple button style for navigation links */
     nav a {
       display: inline-block;
       padding: 8px 16px;
@@ -31,7 +30,6 @@
 
 <body>
 
-  <!-- header with logo and navigation -->
   <header>
     <h1>About Me</h1>
     <nav>
@@ -40,7 +38,6 @@
     </nav>
   </header>
 
-  <!-- main content -->
   <main>
     <h3>My Background</h3>
     <p>I am a student getting a degree in Business Administration and Information Technology.</p>
@@ -49,19 +46,12 @@
     <p>My goal is to graduate and find a well paying job in a warm state.</p>
   </main>
 
-  <!-- footer -->
   <footer>
-    Destiny Watson - <span id="current-date"></span>
+    Destiny Watson - February 18, 2026
   </footer>
-
-  <!-- JavaScript to auto-update date -->
-  <script>
-    const dateElement = document.getElementById('current-date');
-    const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    dateElement.textContent = today.toLocaleDateString('en-US', options);
-  </script>
 
 </body>
 </html>
+
+
 
