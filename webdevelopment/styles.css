@@ -262,7 +262,7 @@ footer {
         gap: 30px;
     }
 
-    .hero h1 {
+    .hero-content .text h1 {
         font-size: 36px;
     }
 
@@ -305,7 +305,7 @@ footer {
         border-left-width: 3px;
     }
 
-    .hero h1 {
+    .hero-content .text h1 {
         font-size: 28px;
     }
 
