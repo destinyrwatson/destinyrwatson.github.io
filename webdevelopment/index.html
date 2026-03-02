@@ -1,58 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  Name: Destiny Watson
-  Course: Web Design Development (IS_LT-4355)
-  Description: Homepage using semantic HTML with styled buttons.
--->
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Homepage</title>
-  <style>
-    nav a {
-      display: inline-block;
-      padding: 8px 16px;
-      margin-right: 10px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background-color: #45a049;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Destiny Watson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body class="welcome-page">
 
-<body>
-
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-
-  <main>
-    <h3>About This Site</h3>
-    <p>This website is designed to learn more about Destiny Watson.</p>
-
-    <h3>My Motto</h3>
-    <blockquote>
-      "And just as the Phoenix rose from the ashes, she too will rise. Returning from the flames, clothed in nothing but her strength, more beautiful than ever before."
-    </blockquote>
-  </main>
-
-  <footer>
-    Destiny Watson - February 18, 2026
-  </footer>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Text on the left -->
+            <div class="text">
+                <h1>Hi! I'm Destiny Watson. Welcome to My Portfolio!</h1>
+                <p>I am a Business Administration & Information Technology Student</p>
+                <blockquote class="quote">
+                    "And just as the Phoenix rose from the ashes, she too will rise. Returning from the flames, clothed in nothing but her strength, more beautiful than ever before."
+                </blockquote>
+                <button onclick="location.href='about.html'">Enter Portfolio</button>
+            </div>
+            <!-- Image on the right -->
+            <div class="image">
+                <img src="destiny.jpg" alt="Destiny Watson">
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
+
 
 
