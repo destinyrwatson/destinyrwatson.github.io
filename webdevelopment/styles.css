@@ -22,7 +22,7 @@ body {
 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
-    color: var(--primary); /* explicit color for h1 */
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -36,7 +36,7 @@ h2 {
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    color: #333333; /* explicit color for paragraphs */
+    color: #333333;
     margin-bottom: 20px;
 }
 
@@ -79,13 +79,77 @@ nav a:hover {
 
 /* ---------------- HERO ---------------- */
 .hero {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 100px 20px;
+    background-color: var(--secondary);
 }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-content .text {
+    flex: 1 1 400px;
+    text-align: left;
+}
+
+.hero-content .text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero-content .text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Quote Styling */
+.hero-content .text .quote {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin: 20px 0 30px 0;
+    line-height: 1.6;
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+/* Button in hero */
+.hero-content .text button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content .text button:hover {
+    background-color: var(--accent);
+}
+
+/* Image Styling */
+.hero-content .image {
+    flex: 1 1 400px;
+}
+
+.hero-content .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 /* ---------------- SECTIONS ---------------- */
@@ -131,21 +195,6 @@ button {
 
 button:hover {
     background-color: var(--primary);
-}
-
-/* Centered Button Wrapper */
-.center-button-wrapper {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.center-button-wrapper a {
-    display: inline-block;
-}
-
-.center-button {
-    display: block;
-    margin: 0 auto;
 }
 
 /* ---------------- PROJECT GRID ---------------- */
@@ -209,6 +258,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .hero-content {
+        gap: 30px;
+    }
+
     .hero h1 {
         font-size: 36px;
     }
@@ -219,7 +272,7 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 15px;
@@ -231,6 +284,25 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content .text {
+        text-align: center;
+    }
+
+    .hero-content .image {
+        margin-top: 20px;
+    }
+
+    .hero-content .text .quote {
+        margin: 15px auto 25px auto;
+        padding-left: 10px;
+        border-left-width: 3px;
     }
 
     .hero h1 {
