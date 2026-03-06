@@ -240,6 +240,25 @@ textarea {
     background-color: var(--secondary);
 }
 
+/* ---------------- RESUME LINK (BOX MODEL) ---------------- */
+.resume-link {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: var(--primary);
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: var(--primary);
@@ -262,7 +281,7 @@ footer {
         gap: 30px;
     }
 
-    .hero-content .text h1 {
+    .hero h1 {
         font-size: 36px;
     }
 
@@ -305,7 +324,7 @@ footer {
         border-left-width: 3px;
     }
 
-    .hero-content .text h1 {
+    .hero h1 {
         font-size: 28px;
     }
 
