@@ -1,0 +1,68 @@
+/* ---------------- ROOT COLORS ---------------- */
+:root {
+    --primary: #6C63FF;   /* Logo / header main color */
+    --secondary: #F3F0FF; /* Background for nav links */
+    --accent: #FF6584;    /* Hover / active link color */
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff; /* White background for header */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+header .logo {
+    height: 60px;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* Space between pills */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 10px 22px;
+    border-radius: 50px; /* Pill shape */
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
