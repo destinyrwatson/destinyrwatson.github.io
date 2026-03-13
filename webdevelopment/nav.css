@@ -1,59 +1,12 @@
-/* ---------------- HEADER ---------------- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 40px;
-    background-color: var(--primary); /* Lavender header */
-}
-
-header img.logo {
-    height: 60px;
-    filter: brightness(0) invert(1); /* Ensures logo appears white */
-}
-
-/* ---------------- NAVIGATION ---------------- */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: var(--primary);          /* Lavender text on nav pill */
-    background-color: var(--secondary); /* Light pill background */
-    padding: 10px 22px;
-    border-radius: 50px;
-    transition: 0.3s ease;
-}
-
-nav a:hover {
-    background-color: var(--accent); /* Pink hover */
-    color: white;
-}
-
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
+<header>
+  <img src="logo.png" alt="Your Site Logo">
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="reflection.html">Reflection</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
