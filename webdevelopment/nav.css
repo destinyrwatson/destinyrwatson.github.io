@@ -1,30 +1,23 @@
-/* ---------------- ROOT COLORS ---------------- */
-:root {
-    --primary: #6C63FF;   /* Logo / header main color */
-    --secondary: #F3F0FF; /* Background for nav links */
-    --accent: #FF6584;    /* Hover / active link color */
-}
-
 /* ---------------- HEADER ---------------- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background-color: #ffffff; /* White background for header */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex-wrap: wrap;
+    padding: 20px 40px;
+    background-color: var(--primary); /* Lavender header */
 }
 
-header .logo {
+header img.logo {
     height: 60px;
+    filter: brightness(0) invert(1); /* Ensures logo appears white */
 }
 
 /* ---------------- NAVIGATION ---------------- */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 15px; /* Space between pills */
+    gap: 12px;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
@@ -35,29 +28,27 @@ nav li {
 }
 
 nav a {
-    display: inline-block;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 16px;
-    color: var(--primary);
-    background-color: var(--secondary);
+    color: var(--primary);          /* Lavender text on nav pill */
+    background-color: var(--secondary); /* Light pill background */
     padding: 10px 22px;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     transition: 0.3s ease;
 }
 
 nav a:hover {
-    background-color: var(--accent);
-    color: #ffffff;
+    background-color: var(--accent); /* Pink hover */
+    color: white;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        gap: 15px;
         align-items: center;
-        gap: 10px;
     }
 
     nav ul {
