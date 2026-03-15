@@ -1,5 +1,6 @@
-/* Navigation bar layout */
+/* nav.css */
 
+/* Flex container for header */
 header {
     display: flex;
     align-items: center;
@@ -8,24 +9,24 @@ header {
     padding: 10px 20px;
 }
 
+/* Logo size */
 header img {
     height: 50px;
 }
 
-nav ul {
-    list-style: none;
+/* Nav links layout */
+nav {
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
+/* Nav link styles */
 nav a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #ffd700; /* gold on hover */
 }
