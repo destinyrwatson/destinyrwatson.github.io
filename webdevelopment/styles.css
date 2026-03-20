@@ -296,6 +296,62 @@ footer {
     font-size: 14px;
 }
 
+/* ---------------- ABOUT PAGE MEDIA ---------------- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+/* Headshot */
+.headshot {
+    width: 250px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headshot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* About Content */
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Video Styling */
+.video-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Resume Button */
+.resume-button {
+    margin-top: 25px;
+}
+
 /* ---------------- RESPONSIVE ---------------- */
 
 /* Tablet */
@@ -361,5 +417,18 @@ footer {
 
     .section {
         padding: 40px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .video-figure {
+        margin-top: 20px;
     }
 }
