@@ -279,6 +279,7 @@ figcaption {
     font-size: 0.9rem;
     color: #555;
 }
+
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: var(--primary);
@@ -354,5 +355,70 @@ footer {
 
     .section {
         padding: 40px 20px;
+    }
+}
+
+/* ---------------- PRINT STYLES FOR ABOUT.HTML ---------------- */
+@media print {
+    body * {
+        display: none !important;
+    }
+
+    /* Show only name, description, education, footer */
+    h1,
+    .section p,
+    .section ul,
+    footer {
+        display: block !important;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-family: serif !important;
+        color: black !important;
+    }
+
+    .section p {
+        font-size: 16px;
+        margin-bottom: 12px;
+        font-family: serif !important;
+        color: black !important;
+    }
+
+    .section ul {
+        margin-bottom: 12px;
+        padding-left: 20px;
+        font-family: serif !important;
+        color: black !important;
+    }
+
+    footer {
+        font-size: 14px;
+        margin-top: 40px;
+        text-align: left;
+        font-family: serif !important;
+        color: black !important;
+    }
+
+    .section img,
+    .video-figure,
+    .resume-link,
+    h2,
+    h3 {
+        display: none !important;
+    }
+
+    @page {
+        margin: 1in;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .section {
+        page-break-inside: avoid;
     }
 }
