@@ -231,7 +231,8 @@ form {
     gap: 15px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 12px;
     border-radius: 15px;
     border: 2px solid var(--primary);
@@ -278,7 +279,6 @@ figcaption {
     font-size: 0.9rem;
     color: #555;
 }
-
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: var(--primary);
@@ -290,17 +290,21 @@ footer {
 }
 
 /* ---------------- RESPONSIVE ---------------- */
+
 /* Tablet */
 @media (max-width: 992px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .hero-content {
         gap: 30px;
     }
+
     .hero h1 {
         font-size: 36px;
     }
+
     h2 {
         font-size: 30px;
     }
@@ -312,85 +316,43 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+
     nav {
         justify-content: center;
     }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
     }
+
     .hero-content .text {
         text-align: center;
     }
+
     .hero-content .image {
         margin-top: 20px;
     }
+
     .hero-content .text .quote {
         margin: 15px auto 25px auto;
         padding-left: 10px;
         border-left-width: 3px;
     }
+
     .hero h1 {
         font-size: 28px;
     }
+
     h2 {
         font-size: 24px;
     }
+
     .section {
         padding: 40px 20px;
-    }
-}
-
-/* ---------------- PRINT STYLES ---------------- */
-@media print {
-    /* Hide images, videos, and buttons */
-    img,
-    video,
-    .profile-video,
-    .video-figure,
-    button,
-    .resume-link {
-        display: none !important;
-    }
-
-    /* Show only textual content */
-    h1,
-    p,
-    ul,
-    ol,
-    footer {
-        display: block !important;
-        color: black !important;
-        font-family: serif !important;
-    }
-
-    /* Adjust font sizes for print */
-    h1 {
-        font-size: 28pt;
-        margin-bottom: 20px;
-    }
-
-    p, ul, ol {
-        font-size: 12pt;
-        margin-bottom: 12px;
-    }
-
-    footer {
-        font-size: 10pt;
-        margin-top: 20px;
-        text-align: left;
-    }
-
-    /* Page margins */
-    @page {
-        margin: 1in;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
     }
 }
