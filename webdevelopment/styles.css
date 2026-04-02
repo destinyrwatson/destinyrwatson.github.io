@@ -1,3 +1,4 @@
+/* ---------------- VARIABLES ---------------- */
 :root {
     --primary: #6C63FF;
     --secondary: #F3F0FF;
@@ -240,7 +241,7 @@ textarea {
     background-color: var(--secondary);
 }
 
-/* ---------------- RESUME LINK (BOX MODEL) ---------------- */
+/* ---------------- RESUME LINK ---------------- */
 .resume-link {
     display: inline-block;
     padding: 12px 25px;
@@ -291,8 +292,6 @@ footer {
 }
 
 /* ---------------- RESPONSIVE ---------------- */
-
-/* Tablet */
 @media (max-width: 992px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -311,7 +310,6 @@ footer {
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -360,6 +358,7 @@ footer {
 
 /* ---------------- PRINT STYLES FOR ABOUT.HTML ---------------- */
 @media print {
+    /* Hide everything by default */
     body * {
         display: none !important;
     }
@@ -372,6 +371,17 @@ footer {
         display: block !important;
     }
 
+    /* Hide all images, videos, buttons, headings globally */
+    img,
+    video,
+    .video-figure,
+    .resume-link,
+    h2,
+    h3 {
+        display: none !important;
+    }
+
+    /* Typography */
     h1 {
         font-size: 36px;
         margin-bottom: 20px;
@@ -401,14 +411,7 @@ footer {
         color: black !important;
     }
 
-    .section img,
-    .video-figure,
-    .resume-link,
-    h2,
-    h3 {
-        display: none !important;
-    }
-
+    /* Page layout */
     @page {
         margin: 1in;
     }
