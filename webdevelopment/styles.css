@@ -237,6 +237,20 @@ input, textarea {
     border: 2px solid var(--primary);
     font-family: 'Open Sans', sans-serif;
     background-color: var(--secondary);
+    /* Add this for dropdowns */
+select {
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--secondary);
+}
+
+/* Optional: make labels look cleaner */
+label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary);
 }
 
 /* ---------------- RESUME LINK (BOX MODEL) ---------------- */
