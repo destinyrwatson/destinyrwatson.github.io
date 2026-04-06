@@ -218,12 +218,38 @@ label {
     text-align: left;
 }
 
-input, textarea, select {
+input, textarea {
     padding: 12px;
     border-radius: 15px;
     border: 2px solid var(--primary);
     font-family: 'Open Sans', sans-serif;
     background-color: var(--secondary);
+}
+
+/* ---------------- FORM SELECT STYLING (dropdowns) ---------------- */
+select {
+    padding: 12px 30px;
+    border-radius: 50px;               /* fully rounded like buttons */
+    border: 2px solid var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.3s ease;
+    appearance: none;                  /* removes default arrow style */
+}
+
+/* Hover effect like buttons */
+select:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(108,99,255,0.5);
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -237,14 +263,55 @@ footer {
 }
 
 /* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-content {
+        gap: 30px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        justify-content: center;
+    }
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
     .hero-content {
         flex-direction: column;
         text-align: center;
+    }
+    .hero-content .text {
+        text-align: center;
+    }
+    .hero-content .image {
+        margin-top: 20px;
+    }
+    .hero-content .text .quote {
+        margin: 15px auto 25px auto;
+        padding-left: 10px;
+        border-left-width: 3px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .section {
+        padding: 40px 20px;
     }
 }
 
