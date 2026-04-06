@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | Destiny Watson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="reflection.html">Reflection</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="section">
+    <h2>Contact Me</h2>
+
+    <form>
+        <input type="text" name="first" placeholder="First Name" required>
+        <input type="text" name="last" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <fieldset>
+            <legend>Reason for Contact:</legend>
+            <input type="radio" name="reason" value="question" id="question">
+            <label for="question">Question</label>
+            <input type="radio" name="reason" value="feedback" id="feedback">
+            <label for="feedback">Feedback</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests / Topics:</legend>
+            <input type="checkbox" name="interest" value="projects" id="projects">
+            <label for="projects">Projects</label>
+            <input type="checkbox" name="interest" value="career" id="career">
+            <label for="career">Career</label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Destiny Watson
+</footer>
+
+</body>
+</html>
