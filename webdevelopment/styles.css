@@ -177,7 +177,7 @@ button:hover {
     background-color: var(--primary);
 }
 
-/* ---------------- PROJECT GRID ---------------- */
+/* ---------------- PROJECT GRID (ORIGINAL) ---------------- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -226,10 +226,10 @@ input, textarea {
     background-color: var(--secondary);
 }
 
-/* ---------------- FORM SELECT STYLING (dropdowns) ---------------- */
+/* ---------------- SELECT ---------------- */
 select {
     padding: 12px 30px;
-    border-radius: 50px;               /* fully rounded like buttons */
+    border-radius: 50px;
     border: 2px solid var(--primary);
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -237,10 +237,8 @@ select {
     color: var(--primary);
     cursor: pointer;
     transition: 0.3s ease;
-    appearance: none;                  /* removes default arrow style */
 }
 
-/* Hover effect like buttons */
 select:hover {
     background-color: var(--accent);
     color: white;
@@ -267,15 +265,6 @@ footer {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .hero-content {
-        gap: 30px;
-    }
-    .hero h1 {
-        font-size: 36px;
-    }
-    h2 {
-        font-size: 30px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -283,78 +272,67 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+
     nav {
         justify-content: center;
     }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-content .text {
-        text-align: center;
-    }
-    .hero-content .image {
-        margin-top: 20px;
-    }
-    .hero-content .text .quote {
-        margin: 15px auto 25px auto;
-        padding-left: 10px;
-        border-left-width: 3px;
-    }
-    .hero h1 {
-        font-size: 28px;
-    }
+
     h2 {
         font-size: 24px;
     }
+
     .section {
         padding: 40px 20px;
     }
 }
 
-/* ---------------- PRINT STYLES ---------------- */
-@media print {
+/* ================= PROJECT PAGE ADDITION ================= */
 
-    body * {
-        display: none !important;
+/* grid layout here */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+/* flexbox inside grid */
+.project-item {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-item img,
+.project-item iframe {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.project-item .text {
+    flex: 1;
+}
+
+/* mobile stacking */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
     }
 
-    .section,
-    .section * {
-        display: block !important;
+    .project-item {
+        flex-direction: column;
+        text-align: center;
     }
 
-    header,
-    nav,
-    img,
-    video,
-    button,
-    input,
-    textarea,
-    select {
-        display: none !important;
-    }
-
-    body {
-        font-family: serif !important;
-        color: black !important;
-        background: white !important;
-    }
-
-    h1, h2, p {
-        color: black !important;
-    }
-
-    footer {
-        display: block !important;
-        font-size: 10pt;
-        text-align: left;
-    }
-
-    @page {
-        margin: 1in;
+    .project-item img,
+    .project-item iframe {
+        width: 100%;
     }
 }
