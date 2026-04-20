@@ -1,97 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+  Name: Destiny Watson
+  Date: February 5, 2026
+  Course: Web Design Development (IS_LT-4355)
+  Description: Starter template with header/nav and projects content added in main section.
+-->
+
 <head>
-    <!--
-      Name: Destiny Watson
-      Date: April 2026
-      Course: Web Design Development (IS_LT-4355)
-      Description: Projects page with responsive layout using Grid, Flexbox, Media Queries, and anchor links.
-    -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Destiny Watson</title>
+  <title>My Starter Template</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
 
-<header>
-    <img src="logo.png" alt="Logo">
+  <!-- Header with logo and nav -->
+  <header>
+    <img src="logo.png" alt="Your Site Logo">
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html#project1">Project 1</a>
-        <a href="projects.html#project2">Project 2</a>
-        <a href="projects.html#project3">Project 3</a>
-        <a href="projects.html#project4">Project 4</a>
-        <a href="reflection.html">Reflection</a>
-        <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
+  <!-- Main content -->
+  <main>
 
-<section class="section">
-    <h2>My Projects</h2>
-</section>
+    <h1>Hello, hope everyone is doing well!</h1>
 
-<!-- PROJECTS SECTION (Grid + Flexbox) -->
-<section class="projects-container">
+    <!-- ================= PROJECTS SECTION ADDED ================= -->
+    <section class="projects-container">
 
-    <article id="project1" class="project-item">
+      <!-- Project 1 -->
+      <article id="project1" class="project-item">
         <figure>
-            <img src="artifact1.jpg" alt="Artifact 1">
+          <img src="artifact1.jpg" alt="Starter Template Artifact">
         </figure>
-        <div class="text">
-            <h3>Project 1</h3>
-            <p>Description (100+ words)</p>
-            <p>Reflection (50–100 words)</p>
-        </div>
-    </article>
 
-    <article id="project2" class="project-item">
+        <div class="text">
+          <h3>Starter Website Template</h3>
+
+          <p>
+            This project focused on building a foundational HTML template that could be reused across multiple pages of a website. I used semantic structure including header, navigation, main, and footer elements to create a consistent layout. I also linked external CSS files and applied Google Fonts to improve typography and consistency. The navigation system was structured using lists to ensure usability and organization. This helped me understand how websites are structured and how pages connect together.
+          </p>
+
+          <p>
+            I learned the importance of clean structure and planning before styling a website. One challenge was keeping navigation consistent across pages. I improved my ability to organize code and build reusable layouts. I would improve this project by adding more interactive elements and enhancing visual design.
+          </p>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article id="project2" class="project-item">
         <figure>
-            <iframe src="artifact2.pdf" style="width:100%;height:300px;"></iframe>
+          <img src="artifact2.jpg" alt="Responsive Layout Artifact">
         </figure>
-        <div class="text">
-            <h3>Project 2</h3>
-            <p>Description (100+ words)</p>
-            <p>Reflection (50–100 words)</p>
-        </div>
-    </article>
 
-    <article id="project3" class="project-item">
+        <div class="text">
+          <h3>Responsive Layout Design</h3>
+
+          <p>
+            This project focused on creating a responsive webpage using CSS Grid, Flexbox, and media queries. I designed layouts that adjust across desktop and mobile screens. Grid was used for structure while Flexbox helped align content inside cards. Media queries were used to change layout and font sizes for smaller screens. This project showed me how important responsive design is for modern websites.
+          </p>
+
+          <p>
+            I learned how to combine Grid and Flexbox effectively. One challenge was making sure the layout did not break on smaller screens. Testing different screen sizes helped me fix issues. I would improve this by refining spacing and experimenting with more advanced layouts.
+          </p>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article id="project3" class="project-item">
         <figure>
-            <img src="artifact3.jpg" alt="Artifact 3">
+          <img src="artifact3.jpg" alt="Financial Literacy App Artifact">
         </figure>
+
         <div class="text">
-            <h3>Project 3</h3>
-            <p>Description (100+ words)</p>
-            <p>Reflection (50–100 words)</p>
+          <h3>Financial Literacy App Concept</h3>
+
+          <p>
+            This project involved designing a concept for a financial literacy application that helps users manage budgeting, saving, and spending. I outlined features such as expense tracking, savings goals, and educational tools. I focused on creating a simple and user-friendly interface that makes financial information easy to understand and access.
+          </p>
+
+          <p>
+            I learned how to simplify complex topics into usable features. One challenge was deciding which features were most important. I improved my ability to think from a user experience perspective. If developed further, I would build a prototype and test it with users.
+          </p>
         </div>
-    </article>
+      </article>
 
-    <article id="project4" class="project-item">
-        <figure>
-            <img src="artifact4.jpg" alt="Artifact 4">
-        </figure>
-        <div class="text">
-            <h3>Project 4</h3>
-            <p>Description (100+ words)</p>
-            <p>Reflection (50–100 words)</p>
-        </div>
-    </article>
+    </section>
 
-</section>
+  </main>
 
-</main>
+  <!-- Footer -->
+  <footer>
+    <p>
+      <img src="phone.png" class="icon">
+      (573) 819-0192
+    </p>
 
-<footer>
-    © 2026 Destiny Watson
-</footer>
+    <p>
+      <img src="email.png" class="icon">
+      destinywatson06@gmail.com
+    </p>
+  </footer>
 
 </body>
 </html>
+
