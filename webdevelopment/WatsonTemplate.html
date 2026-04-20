@@ -5,7 +5,7 @@
       Name: Destiny Watson
       Date: April 2026
       Course: Web Design Development (IS_LT-4355)
-      Description: Projects page updated with responsive layout additions while preserving original structure.
+      Description: Projects page with responsive layout using Grid, Flexbox, Media Queries, and anchor links.
     -->
 
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header>
@@ -22,7 +23,10 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html#project1">Project 1</a>
+        <a href="projects.html#project2">Project 2</a>
+        <a href="projects.html#project3">Project 3</a>
+        <a href="projects.html#project4">Project 4</a>
         <a href="reflection.html">Reflection</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -32,31 +36,32 @@
 
 <section class="section">
     <h2>My Projects</h2>
-
-    <!-- existing grid (kept) -->
-    <div class="projects-grid">
-        <a href="#project1" class="project-link">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Description (100+ words)</p>
-                <img src="artifact1.jpg" alt="Artifact 1" style="width:100%;border-radius:10px;">
-                <p>Reflection (50–100 words)</p>
-            </div>
-        </a>
-
-        <a href="#project2" class="project-link">
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Description (100+ words)</p>
-                <iframe src="artifact2.pdf" style="width:100%;height:300px;"></iframe>
-                <p>Reflection (50–100 words)</p>
-            </div>
-        </a>
-    </div>
 </section>
 
-<!-- added sections for anchor links + semantic structure -->
+<!-- PROJECTS SECTION (Grid + Flexbox) -->
 <section class="projects-container">
+
+    <article id="project1" class="project-item">
+        <figure>
+            <img src="artifact1.jpg" alt="Artifact 1">
+        </figure>
+        <div class="text">
+            <h3>Project 1</h3>
+            <p>Description (100+ words)</p>
+            <p>Reflection (50–100 words)</p>
+        </div>
+    </article>
+
+    <article id="project2" class="project-item">
+        <figure>
+            <iframe src="artifact2.pdf" style="width:100%;height:300px;"></iframe>
+        </figure>
+        <div class="text">
+            <h3>Project 2</h3>
+            <p>Description (100+ words)</p>
+            <p>Reflection (50–100 words)</p>
+        </div>
+    </article>
 
     <article id="project3" class="project-item">
         <figure>
@@ -74,4 +79,19 @@
             <img src="artifact4.jpg" alt="Artifact 4">
         </figure>
         <div class="text">
+            <h3>Project 4</h3>
+            <p>Description (100+ words)</p>
+            <p>Reflection (50–100 words)</p>
+        </div>
+    </article>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Destiny Watson
+</footer>
+
+</body>
 </html>
