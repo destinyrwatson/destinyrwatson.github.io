@@ -11,6 +11,7 @@
     box-sizing: border-box;
 }
 
+/* Custom font from Google Fonts applied to site */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--secondary);
@@ -19,11 +20,16 @@ body {
 }
 
 /* ---------------- HEADINGS & PARAGRAPHS ---------------- */
+
+/* Custom styles for all <h1> elements */
 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
     color: var(--primary);
     margin-bottom: 20px;
+
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 
 h2 {
@@ -31,6 +37,8 @@ h2 {
     font-size: 36px;
     color: var(--primary);
     margin-bottom: 15px;
+
+    letter-spacing: 1px;
 }
 
 p {
@@ -177,7 +185,7 @@ button:hover {
     background-color: var(--primary);
 }
 
-/* ---------------- PROJECT GRID (ORIGINAL) ---------------- */
+/* ---------------- PROJECT GRID ---------------- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -290,9 +298,7 @@ footer {
     }
 }
 
-/* ================= PROJECT PAGE ADDITION ================= */
-
-/* grid layout here */
+/* ---------------- PROJECT PAGE ---------------- */
 .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -300,7 +306,6 @@ footer {
     padding: 40px;
 }
 
-/* flexbox inside grid */
 .project-item {
     display: flex;
     gap: 20px;
@@ -320,7 +325,6 @@ footer {
     flex: 1;
 }
 
-/* mobile stacking */
 @media (max-width: 768px) {
     .projects-container {
         grid-template-columns: 1fr;
