@@ -260,7 +260,7 @@ select:focus {
 
 /* ---------------- ABOUT PAGE VIDEO ---------------- */
 .profile-video {
-    width: 250px;
+    width: 180px;
     max-width: 100%;
     border-radius: 10px;
 }
