@@ -258,6 +258,18 @@ select:focus {
     box-shadow: 0 0 5px rgba(108,99,255,0.5);
 }
 
+/* ---------------- ABOUT PAGE VIDEO ---------------- */
+.profile-video {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.video-figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: var(--primary);
