@@ -1,4 +1,4 @@
-/* nav.css - navigation styling */
+/* ---------------- HEADER ---------------- */
 
 header {
     display: flex;
@@ -13,35 +13,38 @@ header img {
     height: 60px;
 }
 
-nav ul {
-    list-style: none;
+/* ---------------- NAVIGATION ---------------- */
+
+nav {
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-nav ul li a {
+/* nav links */
+nav a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: white;
+    color: var(--primary);
     background-color: var(--secondary);
     padding: 10px 22px;
     border-radius: 50px;
     transition: 0.3s ease;
+    display: inline-block;
 }
 
-nav ul li a:hover {
+/* hover effect */
+nav a:hover {
     background-color: var(--accent);
     color: white;
+    transform: scale(1.05);
 }
 
-/* Responsive nav */
+/* ---------------- MOBILE NAV ---------------- */
+
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    nav {
+        justify-content: center;
     }
 }
