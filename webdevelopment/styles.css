@@ -416,9 +416,14 @@ footer {
         margin: 1in !important;
     }
 
+    /* Hide ALL images and icons */
+    img,
+    .icon {
+        display: none !important;
+    }
+
     header,
     nav,
-    .icon,
     button,
     select {
         display: none !important;
@@ -438,18 +443,22 @@ footer {
         box-shadow: none !important;
     }
 
+    /* Force single-page flow */
+    html, body {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Prevent page breaks anywhere */
+    * {
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+    }
+
     footer {
         margin-top: 20px;
         font-size: 12pt;
         color: black !important;
         text-align: left;
-    }
-
-    h1, h2, h3 {
-        page-break-after: avoid;
-    }
-
-    p, ul, ol {
-        page-break-inside: avoid;
     }
 }
