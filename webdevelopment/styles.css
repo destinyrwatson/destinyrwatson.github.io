@@ -424,14 +424,11 @@ footer {
     nav,
     button,
     select,
-    img,
-    .icon,
     .hero,
     .hero-content,
     .projects-grid,
     .projects-container,
     .reflection-section,
-    .section {
     .section,
     .image {
         display: none !important;
@@ -460,7 +457,6 @@ footer {
         color: black !important;
     }
 
-    /* NAME (H1) */
     /* NAME */
     h1 {
         font-size: 20pt;
@@ -480,7 +476,6 @@ footer {
         padding-left: 20px;
     }
 
-    /* FOOTER (CONTACT INFO ONLY) */
     /* FOOTER CONTACT INFO */
     footer {
         font-size: 12pt;
@@ -489,10 +484,8 @@ footer {
         color: black !important;
     }
 
-    /* REMOVE COLORS AND DECORATION */
     /* REMOVE ALL COLOR STYLING */
     * {
-        box-shadow: none !important;
         background: transparent !important;
         box-shadow: none !important;
     }
@@ -502,15 +495,12 @@ footer {
         text-decoration: none !important;
     }
 
-    /* FORCE TIGHT SPACING TO FIT ONE PAGE */
-    h1, p, ul, ol {
     /* TIGHT SPACING TO FIT ONE PAGE */
     h1, p, ul, ol, footer {
         margin-top: 0;
         margin-bottom: 10px;
     }
 
-    /* PREVENT EXTRA PAGE BREAKS */
     /* PREVENT PAGE BREAK ISSUES */
     h1, p, ul, ol, footer {
         page-break-inside: avoid !important;
