@@ -424,14 +424,27 @@ footer {
     nav,
     button,
     select,
-    img,
-    .icon,
     .hero,
+    .hero-content,
     .projects-grid,
     .projects-container,
     .reflection-section,
-    .section {
+    .section,
+    .image {
         display: none !important;
+    }
+
+    /* STRONG IMAGE REMOVAL (CATCH ALL REMAINING CASES) */
+    img,
+    picture,
+    svg,
+    video,
+    iframe,
+    .icon {
+        display: none !important;
+        visibility: hidden !important;
+        max-width: 0 !important;
+        max-height: 0 !important;
     }
 
     /* SHOW ONLY REQUIRED ELEMENTS */
@@ -444,7 +457,7 @@ footer {
         color: black !important;
     }
 
-    /* NAME (H1) */
+    /* NAME */
     h1 {
         font-size: 20pt;
         margin-bottom: 10px;
@@ -463,7 +476,7 @@ footer {
         padding-left: 20px;
     }
 
-    /* FOOTER (CONTACT INFO ONLY) */
+    /* FOOTER CONTACT INFO */
     footer {
         font-size: 12pt;
         margin-top: 20px;
@@ -471,10 +484,10 @@ footer {
         color: black !important;
     }
 
-    /* REMOVE COLORS AND DECORATION */
+    /* REMOVE ALL COLOR STYLING */
     * {
-        box-shadow: none !important;
         background: transparent !important;
+        box-shadow: none !important;
     }
 
     a {
@@ -482,13 +495,13 @@ footer {
         text-decoration: none !important;
     }
 
-    /* FORCE TIGHT SPACING TO FIT ONE PAGE */
-    h1, p, ul, ol {
+    /* TIGHT SPACING TO FIT ONE PAGE */
+    h1, p, ul, ol, footer {
         margin-top: 0;
         margin-bottom: 10px;
     }
 
-    /* PREVENT EXTRA PAGE BREAKS */
+    /* PREVENT PAGE BREAK ISSUES */
     h1, p, ul, ol, footer {
         page-break-inside: avoid !important;
         page-break-after: avoid !important;
