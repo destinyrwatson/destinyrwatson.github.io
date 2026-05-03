@@ -409,28 +409,72 @@ footer {
 /* ---------------- PRINT STYLES ---------------- */
 @media print {
 
+    /* PAGE SETUP */
     body {
-        background: white !important;
-        color: black !important;
-        font-family: serif !important;
         margin: 1in !important;
+        font-family: serif !important;
+        color: black !important;
+        background: white !important;
+        font-size: 12pt;
+        line-height: 1.4;
     }
 
-    /* Hide ALL images and icons */
-    img,
-    .icon {
-        display: none !important;
-    }
-
+    /* HIDE EVERYTHING FIRST */
     header,
     nav,
     button,
-    select {
+    select,
+    img,
+    .icon,
+    .hero,
+    .projects-grid,
+    .projects-container,
+    .reflection-section,
+    .section {
         display: none !important;
     }
 
-    h1, h2, h3, p, ul, ol, li {
+    /* SHOW ONLY REQUIRED ELEMENTS */
+    h1,
+    p,
+    ul,
+    ol,
+    footer {
+        display: block !important;
         color: black !important;
+    }
+
+    /* NAME (H1) */
+    h1 {
+        font-size: 20pt;
+        margin-bottom: 10px;
+    }
+
+    /* DESCRIPTION */
+    p {
+        font-size: 12pt;
+        margin-bottom: 10px;
+    }
+
+    /* EDUCATION LIST */
+    ul, ol {
+        font-size: 12pt;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    /* FOOTER (CONTACT INFO ONLY) */
+    footer {
+        font-size: 12pt;
+        margin-top: 20px;
+        text-align: left;
+        color: black !important;
+    }
+
+    /* REMOVE COLORS AND DECORATION */
+    * {
+        box-shadow: none !important;
+        background: transparent !important;
     }
 
     a {
@@ -438,27 +482,15 @@ footer {
         text-decoration: none !important;
     }
 
-    * {
-        background: transparent !important;
-        box-shadow: none !important;
+    /* FORCE TIGHT SPACING TO FIT ONE PAGE */
+    h1, p, ul, ol {
+        margin-top: 0;
+        margin-bottom: 10px;
     }
 
-    /* Force single-page flow */
-    html, body {
-        height: auto !important;
-        overflow: visible !important;
-    }
-
-    /* Prevent page breaks anywhere */
-    * {
+    /* PREVENT EXTRA PAGE BREAKS */
+    h1, p, ul, ol, footer {
         page-break-inside: avoid !important;
         page-break-after: avoid !important;
-    }
-
-    footer {
-        margin-top: 20px;
-        font-size: 12pt;
-        color: black !important;
-        text-align: left;
     }
 }
