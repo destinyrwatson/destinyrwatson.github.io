@@ -104,12 +104,48 @@ nav a:hover {
     text-align: left;
 }
 
-/* ---------------- HERO QUOTE ---------------- */
-.hero-content .text .quote {
-    color: #FF6584;
+.hero-content .text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-/* ---------------- IMAGE FADE IN (ONLY CONTENT IMAGES) ---------------- */
+.hero-content .text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.hero-content .text .quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin: 20px 0 30px 0;
+    line-height: 1.6;
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+.hero-content .text button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content .text button:hover {
+    background-color: var(--accent);
+}
+
+.hero-content .image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------------- IMAGE FADE IN ANIMATION ---------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -121,20 +157,14 @@ nav a:hover {
     }
 }
 
-/* apply ONLY to content images, NOT icons */
-.hero-content img,
-.section img,
-.project-card img,
-.project-item img {
+/* applies to ALL images */
+img {
     animation: fadeIn 1s ease-in-out both;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* hover effect for normal images */
-.hero-content img:hover,
-.section img:hover,
-.project-card img:hover,
-.project-item img:hover {
+/* optional hover effect */
+img:hover {
     transform: scale(1.05);
 }
 
@@ -228,7 +258,45 @@ input, textarea {
     background-color: var(--secondary);
 }
 
-/* ---------------- FOOTER ICON ANIMATION (ONLY ICONS) ---------------- */
+/* ---------------- SELECT ---------------- */
+select {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 2px solid var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+select:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(108,99,255,0.5);
+}
+
+/* ---------------- ABOUT PAGE VIDEO ---------------- */
+.profile-video {
+    width: 250px !important;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.video-figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ---------------- FOOTER ICON ANIMATION ---------------- */
 .icon {
     width: 20px;
     vertical-align: middle;
@@ -236,10 +304,9 @@ input, textarea {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* hover animation ONLY for footer icons */
 .icon:hover {
-    transform: scale(1.4);
-    filter: drop-shadow(0 0 10px var(--accent));
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 8px var(--accent));
 }
 
 .icon {
@@ -327,9 +394,26 @@ footer {
     flex: 1;
 }
 
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-item img,
+    .project-item iframe {
+        width: 100%;
+    }
+}
+
 /* ---------------- PRINT STYLES ---------------- */
 @media print {
 
+    /* PAGE SETUP */
     body {
         margin: 1in !important;
         font-family: serif !important;
@@ -339,28 +423,91 @@ footer {
         line-height: 1.4;
     }
 
+    /* HIDE EVERYTHING FIRST */
     header,
     nav,
     button,
     select,
-    img,
-    .icon,
     .hero,
+    .hero-content,
     .projects-grid,
     .projects-container,
     .reflection-section,
-    .section {
+    .section,
+    .image {
         display: none !important;
     }
 
-    h1, p, ul, ol, footer {
+    /* STRONG IMAGE REMOVAL (CATCH ALL REMAINING CASES) */
+    img,
+    picture,
+    svg,
+    video,
+    iframe,
+    .icon {
+        display: none !important;
+        visibility: hidden !important;
+        max-width: 0 !important;
+        max-height: 0 !important;
+    }
+
+    /* SHOW ONLY REQUIRED ELEMENTS */
+    h1,
+    p,
+    ul,
+    ol,
+    footer {
         display: block !important;
         color: black !important;
     }
 
+    /* NAME */
+    h1 {
+        font-size: 20pt;
+        margin-bottom: 10px;
+    }
+
+    /* DESCRIPTION */
+    p {
+        font-size: 12pt;
+        margin-bottom: 10px;
+    }
+
+    /* EDUCATION LIST */
+    ul, ol {
+        font-size: 12pt;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    /* FOOTER CONTACT INFO */
     footer {
         font-size: 12pt;
         margin-top: 20px;
         text-align: left;
+        color: black !important;
+    }
+
+    /* REMOVE ALL COLOR STYLING */
+    * {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    /* TIGHT SPACING TO FIT ONE PAGE */
+    h1, p, ul, ol, footer {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    /* PREVENT PAGE BREAK ISSUES */
+    h1, p, ul, ol, footer {
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
     }
 }
