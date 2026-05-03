@@ -104,7 +104,54 @@ nav a:hover {
     text-align: left;
 }
 
-/* ---------------- IMAGE FADE IN (ONLY CONTENT IMAGES) ---------------- */
+.hero-content .text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content .text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.hero-content .text .quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin: 20px 0 30px 0;
+    line-height: 1.6;
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+.hero-content .text button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content .text button:hover {
+    background-color: var(--accent);
+}
+
+.hero-content .image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+/* ---------------- IMAGE FADE IN (GLOBAL - OLD VERSION) ---------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -116,28 +163,13 @@ nav a:hover {
     }
 }
 
-/* apply ONLY to content images, NOT icons */
-.hero-content img,
-.section img,
-.project-card img,
-.project-item img {
+img {
     animation: fadeIn 1s ease-in-out both;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* hover effect for normal images */
-.hero-content img:hover,
-.section img:hover,
-.project-card img:hover,
-.project-item img:hover {
+img:hover {
     transform: scale(1.05);
-}
-
-/* hero image sizing */
-.hero-content .image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
 }
 
 /* ---------------- SECTIONS ---------------- */
@@ -223,7 +255,45 @@ input, textarea {
     background-color: var(--secondary);
 }
 
-/* ---------------- FOOTER ICON ANIMATION (ONLY ICONS) ---------------- */
+/* ---------------- SELECT ---------------- */
+select {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 2px solid var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+select:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(108,99,255,0.5);
+}
+
+/* ---------------- ABOUT VIDEO ---------------- */
+.profile-video {
+    width: 250px !important;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.video-figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ---------------- FOOTER ICONS (ORIGINAL STYLE) ---------------- */
 .icon {
     width: 20px;
     vertical-align: middle;
@@ -231,10 +301,9 @@ input, textarea {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* hover animation ONLY for footer icons */
 .icon:hover {
-    transform: scale(1.4);
-    filter: drop-shadow(0 0 10px var(--accent));
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 8px var(--accent));
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -288,70 +357,5 @@ footer {
     .hero-content .image img {
         max-width: 300px;
         margin: 0 auto;
-    }
-}
-
-/* ---------------- PROJECT PAGE ---------------- */
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 40px;
-}
-
-.project-item {
-    display: flex;
-    gap: 20px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.project-item img,
-.project-item iframe {
-    width: 200px;
-    border-radius: 10px;
-}
-
-.project-item .text {
-    flex: 1;
-}
-
-/* ---------------- PRINT STYLES ---------------- */
-@media print {
-
-    body {
-        margin: 1in !important;
-        font-family: serif !important;
-        color: black !important;
-        background: white !important;
-        font-size: 12pt;
-        line-height: 1.4;
-    }
-
-    header,
-    nav,
-    button,
-    select,
-    img,
-    .icon,
-    .hero,
-    .projects-grid,
-    .projects-container,
-    .reflection-section,
-    .section {
-        display: none !important;
-    }
-
-    h1, p, ul, ol, footer {
-        display: block !important;
-        color: black !important;
-    }
-
-    footer {
-        font-size: 12pt;
-        margin-top: 20px;
-        text-align: left;
     }
 }
