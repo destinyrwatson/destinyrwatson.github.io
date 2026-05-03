@@ -428,13 +428,12 @@ footer {
     nav,
     button,
     select,
-    .hero,
-    .hero-content,
-    .projects-grid,
-    .projects-container,
-    .reflection-section,
-    .section,
-    .image {
+    img,
+    picture,
+    svg,
+    video,
+    iframe,
+    .icon {
         display: none !important;
     }
 
@@ -451,8 +450,17 @@ footer {
         max-height: 0 !important;
     }
 
+    /* ---------------- SHOW ONLY CONTENT AREAS ---------------- */
+    .hero,
+    .section,
+    .reflection-section,
+    main,
+    footer {
+        display: block !important;
+    }
     /* SHOW ONLY REQUIRED ELEMENTS */
     h1,
+    h2,
     p,
     ul,
     ol,
@@ -467,6 +475,11 @@ footer {
         margin-bottom: 10px;
     }
 
+     /* ---------------- HEADINGS ---------------- */
+    h2 {
+        font-size: 14pt;
+        margin-bottom: 8px;
+    }
     /* DESCRIPTION */
     p {
         font-size: 12pt;
@@ -500,13 +513,13 @@ footer {
     }
 
     /* TIGHT SPACING TO FIT ONE PAGE */
-    h1, p, ul, ol, footer {
+    h1, h2, p, ul, ol, footer {
         margin-top: 0;
         margin-bottom: 10px;
     }
 
     /* PREVENT PAGE BREAK ISSUES */
-    h1, p, ul, ol, footer {
+    h1, h2, p, ul, ol, footer {
         page-break-inside: avoid !important;
         page-break-after: avoid !important;
     }
