@@ -237,6 +237,10 @@ input, textarea {
     filter: drop-shadow(0 0 10px var(--accent));
 }
 
+.icon {
+    animation: none !important;
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: var(--primary);
