@@ -145,6 +145,30 @@ nav a:hover {
     justify-content: center;
 }
 
+/* ---------------- IMAGE FADE IN ANIMATION ---------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* applies to ALL images */
+img {
+    animation: fadeIn 1s ease-in-out both;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* optional hover effect */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* hero image sizing */
 .hero-content .image img {
     width: 100%;
     max-width: 400px;
