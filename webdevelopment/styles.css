@@ -104,6 +104,11 @@ nav a:hover {
     text-align: left;
 }
 
+/* ---------------- HERO QUOTE ---------------- */
+.hero-content .text .quote {
+    color: #FF6584;
+}
+
 /* ---------------- IMAGE FADE IN (ONLY CONTENT IMAGES) ---------------- */
 @keyframes fadeIn {
     from {
