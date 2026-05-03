@@ -145,13 +145,7 @@ nav a:hover {
     justify-content: center;
 }
 
-.hero-content .image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-}
-
-/* ---------------- IMAGE FADE IN (GLOBAL - OLD VERSION) ---------------- */
+/* ---------------- IMAGE FADE IN ANIMATION ---------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -163,13 +157,22 @@ nav a:hover {
     }
 }
 
+/* applies to ALL images */
 img {
     animation: fadeIn 1s ease-in-out both;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* optional hover effect */
 img:hover {
     transform: scale(1.05);
+}
+
+/* hero image sizing */
+.hero-content .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
 }
 
 /* ---------------- SECTIONS ---------------- */
@@ -279,7 +282,7 @@ select:focus {
     box-shadow: 0 0 5px rgba(108,99,255,0.5);
 }
 
-/* ---------------- ABOUT VIDEO ---------------- */
+/* ---------------- ABOUT PAGE VIDEO ---------------- */
 .profile-video {
     width: 250px !important;
     height: auto;
@@ -293,7 +296,7 @@ select:focus {
     text-align: center;
 }
 
-/* ---------------- FOOTER ICONS (ORIGINAL STYLE) ---------------- */
+/* ---------------- FOOTER ICON ANIMATION ---------------- */
 .icon {
     width: 20px;
     vertical-align: middle;
@@ -357,5 +360,160 @@ footer {
     .hero-content .image img {
         max-width: 300px;
         margin: 0 auto;
+    }
+}
+
+/* ---------------- PROJECT PAGE ---------------- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.project-item {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-item img,
+.project-item iframe {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.project-item .text {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-item img,
+    .project-item iframe {
+        width: 100%;
+    }
+}
+
+/* ---------------- PRINT STYLES ---------------- */
+@media print {
+
+    /* PAGE SETUP */
+    body {
+        margin: 1in !important;
+        font-family: serif !important;
+        color: black !important;
+        background: white !important;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    /* HIDE EVERYTHING FIRST */
+    header,
+    nav,
+    button,
+    select,
+    img,
+    .icon,
+    .hero,
+    .hero-content,
+    .projects-grid,
+    .projects-container,
+    .reflection-section,
+    .section {
+    .section,
+    .image {
+        display: none !important;
+    }
+
+    /* STRONG IMAGE REMOVAL (CATCH ALL REMAINING CASES) */
+    img,
+    picture,
+    svg,
+    video,
+    iframe,
+    .icon {
+        display: none !important;
+        visibility: hidden !important;
+        max-width: 0 !important;
+        max-height: 0 !important;
+    }
+
+    /* SHOW ONLY REQUIRED ELEMENTS */
+    h1,
+    p,
+    ul,
+    ol,
+    footer {
+        display: block !important;
+        color: black !important;
+    }
+
+    /* NAME (H1) */
+    /* NAME */
+    h1 {
+        font-size: 20pt;
+        margin-bottom: 10px;
+    }
+
+    /* DESCRIPTION */
+    p {
+        font-size: 12pt;
+        margin-bottom: 10px;
+    }
+
+    /* EDUCATION LIST */
+    ul, ol {
+        font-size: 12pt;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    /* FOOTER (CONTACT INFO ONLY) */
+    /* FOOTER CONTACT INFO */
+    footer {
+        font-size: 12pt;
+        margin-top: 20px;
+        text-align: left;
+        color: black !important;
+    }
+
+    /* REMOVE COLORS AND DECORATION */
+    /* REMOVE ALL COLOR STYLING */
+    * {
+        box-shadow: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    /* FORCE TIGHT SPACING TO FIT ONE PAGE */
+    h1, p, ul, ol {
+    /* TIGHT SPACING TO FIT ONE PAGE */
+    h1, p, ul, ol, footer {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    /* PREVENT EXTRA PAGE BREAKS */
+    /* PREVENT PAGE BREAK ISSUES */
+    h1, p, ul, ol, footer {
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
     }
 }
