@@ -98,7 +98,6 @@ nav a:hover {
     width: 100%;
 }
 
-/* FIX: limit text width */
 .hero-content .text {
     flex: 1 1 400px;
     max-width: 550px;
@@ -112,7 +111,7 @@ nav a:hover {
 
 .hero-content .text p {
     font-size: 18px;
-    margin-bottom: 15px; /* tighter spacing */
+    margin-bottom: 15px;
 }
 
 .hero-content .text .quote {
@@ -303,7 +302,6 @@ footer {
     }
 }
 
-/* HERO FIX FOR MOBILE */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -326,7 +324,6 @@ footer {
         padding: 40px 20px;
     }
 
-    /* 🔥 THIS FIXES YOUR HERO */
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -382,5 +379,53 @@ footer {
     .project-item img,
     .project-item iframe {
         width: 100%;
+    }
+}
+
+/* ---------------- PRINT STYLES ---------------- */
+@media print {
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-family: serif !important;
+        margin: 1in !important;
+    }
+
+    header,
+    nav,
+    .icon,
+    button,
+    select {
+        display: none !important;
+    }
+
+    h1, h2, h3, p, ul, ol, li {
+        color: black !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    * {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 12pt;
+        color: black !important;
+        text-align: left;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    p, ul, ol {
+        page-break-inside: avoid;
     }
 }
